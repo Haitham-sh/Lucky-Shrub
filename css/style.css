@@ -1,0 +1,204 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  color: white;
+  font-family: "Playfair Display", serif;
+}
+
+.container {
+  width: 90%;
+  margin: 0px auto;
+  text-align: center;
+}
+
+header,
+footer {
+  background-color: #63bf20;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  width: 75%;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  margin-right: 5%;
+}
+
+header div {
+  margin-left: 5%;
+}
+
+header img,
+footer img {
+  transition: all linear 500ms;
+}
+
+header img:hover {
+  transform: rotateY(360deg);
+}
+
+footer img:hover {
+  transform: scale(1.1);
+}
+
+ul {
+  width: 100%;
+  list-style: none;
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+nav a {
+  color: #e9e6eb;
+  text-decoration: none;
+  font-size: larger;
+  font-weight: bold;
+}
+
+nav a:hover {
+  border-bottom: solid 2px #e3da38;
+  color: #e3da38;
+}
+
+main {
+  display: grid;
+  justify-content: center;
+  column-gap: 5px;
+}
+
+article {
+  background-color: #63bf20;
+  padding-bottom: 10px;
+  margin: 5px 0px 0px 0px;
+  border-radius: 5px;
+}
+
+main article:first-child {
+  grid-area: first;
+}
+
+main article:nth-child(2) {
+  grid-area: Second;
+}
+
+main article:nth-child(3) {
+  grid-area: third;
+}
+
+main article:nth-child(4) {
+  grid-area: fourth;
+}
+
+main article:not(.top):hover {
+  box-shadow: inset #e3da38 0px 0px 10px 3px;
+}
+
+.top img {
+  border-radius: 5px;
+}
+.image {
+  margin-top: 20px;
+  width: 80%;
+  height: auto;
+}
+
+h1,
+h2,
+p {
+  text-align: left;
+  margin: 10px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+p {
+  color: #cee6b9;
+  font-size: x-large;
+}
+
+p::first-letter {
+  color: #e3da38;
+  font-size: xx-large;
+}
+
+footer {
+  align-items: center;
+  border-radius: 5px;
+  margin: 5px 0px;
+}
+
+i {
+  color: #e3da38;
+}
+
+@media only screen and (max-width: 767px) {
+  main {
+    grid-template-areas:
+      "first"
+      "Second"
+      "third"
+      "fourth";
+  }
+
+  nav a {
+    font-size: small;
+    font-weight: bold;
+  }
+}
+
+@media only screen and (max-width: 920px) and (min-width: 768px) {
+  main {
+    grid-template-areas:
+      "first first first first first first"
+      "Second Second Second third third third"
+      ". . fourth fourth . .";
+  }
+
+  .image {
+    height: 175px;
+  }
+}
+
+@media only screen and (min-width: 921px) {
+  main {
+    grid-template-areas:
+      "first first first first first first"
+      "Second Second third third fourth fourth";
+  }
+
+  .image {
+    height: 200px;
+  }
+
+  footer {
+    display: flex;
+  }
+
+  footer div {
+    flex: 1 1 0px;
+    text-align: center;
+  }
+
+  footer img {
+    margin: 0px auto;
+  }
+
+  footer div:last-child {
+    padding-left: 50px;
+  }
+}
