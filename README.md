@@ -1,6 +1,6 @@
-#Lucky Shrub
+# Lucky Shrub
 
-##The requirements.
+## The requirements.
 
 * Creat a home page for Lucky Shrub.
 
@@ -14,10 +14,10 @@
 
 * A footer that is split into two columns, the left column of the footer contain a small version of the client logo and the right column copyright text and contact us details.
 
-##Build with.
+## Build with.
 
 * HTML
 * CSS
 
-##development.
+##  development.
 * **Haitham Elsherbiny**
